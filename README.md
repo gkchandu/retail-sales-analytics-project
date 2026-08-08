@@ -1,1 +1,54 @@
-# retail-sales-analytics-project
+# Retail Sales Analytics Pipeline
+
+An end-to-end data science project analyzing retail sales data — from data cleaning and visualization to predictive modeling and business insights.
+
+## 📊 Dataset
+**Superstore Dataset** ([Kaggle](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final))
+Contains order-level retail data including sales, profit, discount, category, region, and order dates (2014-2017).
+
+## 🎯 Project Goals
+This project follows a full data science pipeline across four phases:
+1. **Data Cleaning & Visualization** — clean the dataset and uncover initial patterns
+2. **Predictive Modeling** — build and evaluate ML models on the cleaned data
+3. **Exploratory Data Analysis** — deeper statistical analysis and correlation study
+4. **Real-World Application** — apply the full pipeline to derive business recommendations
+
+## 🛠️ Tools & Libraries
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- Scikit-learn *(from Week 2 onward)*
+- Google Colab
+
+## 📁 Project Structure 
+retail-sales-analytics-project/
+│
+├── 01_Data_Cleaning_Visualization.ipynb # Week 1
+├── 02_Predictive_Modeling.ipynb # Week 2 (coming soon)
+├── 03_Exploratory_Data_Analysis.ipynb # Week 3 (coming soon)
+├── 04_Real_World_Application.ipynb # Week 4 (coming soon)
+└── README.md
+
+## ✅ Week 1: Data Cleaning & Visualization
+**Status:** Complete
+
+**What was done:**
+- Checked and confirmed no missing values or duplicate rows in the dataset
+- Fixed data types (converted Order Date, Ship Date to datetime)
+- Identified profit outliers using boxplot analysis
+- Built visualizations: Sales by Category, Sales by Region, Profit distribution, Monthly sales trend, Discount vs Profit
+
+**Key Findings:**
+- Technology leads total sales (800,000+), followed closely by Furniture and Office Supplies
+- West region leads in sales (700,000+); South region trails behind (under 400,000)
+- Sales show strong year-end seasonality with overall growth from 2015 to 2017 (peak: 2017 at 118,447)
+- Higher discounts are strongly linked to losses — orders with 70-80% discount are almost always unprofitable, especially in the Technology category
+
+## 🔜 Coming Up
+- Week 2: Predictive modeling (Linear Regression, Decision Trees, Random Forest)
+- Week 3: Deeper exploratory analysis and correlation study
+- Week 4: Applied business case study and final recommendations
+
+## 👤 Author
+*[G K Chandrakala]* — B.E CSE(AI-ML) Student
