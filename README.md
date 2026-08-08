@@ -24,7 +24,7 @@ This project follows a full data science pipeline across four phases:
 ## 📁 Project Structure
 ```
 retail-sales-analytics-project/
-├── 01_Data_Cleaning_Visualization.ipynb    # Week 1
+├── 01_Data_Cleaning_and_Visualization.ipynb    # Week 1
 ├── 02_Predictive_Modeling.ipynb            # Week 2 (coming soon)
 ├── 03_Exploratory_Data_Analysis.ipynb      # Week 3 (coming soon)
 ├── 04_Real_World_Application.ipynb         # Week 4 (coming soon)
