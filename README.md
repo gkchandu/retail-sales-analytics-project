@@ -1,5 +1,7 @@
 # Retail Sales Analytics Pipeline
 
+🔗 **Live Dashboard:** [View Interactive Dashboard](https://retail-sales-analytics-project-dashboard.streamlit.app)
+
 An end-to-end data science project analyzing retail sales data — from data cleaning and visualization to predictive modeling and business insights.
 
 ## 📊 Dataset
