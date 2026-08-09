@@ -62,3 +62,41 @@ st.markdown("""
 - **Discount is a major driver of losses** — higher discounts correlate strongly with negative profit, especially in Technology.
 - **Sales show seasonality** with year-end peaks and overall growth from 2015 to 2017.
 """)
+
+st.header("🤖 Week 2: Predictive Modeling")
+
+tab1, tab2 = st.tabs(["Classification: Profitability", "Regression: Sales Prediction"])
+
+with tab1:
+    st.subheader("Model Comparison - Predicting Profitability")
+    model_results = pd.DataFrame({
+        'Model': ['Logistic Regression', 'KNN', 'Random Forest', 'Decision Tree'],
+        'Accuracy': [0.942, 0.9375, 0.936, 0.930],
+        'AUC': [0.98, 0.94, 0.97, 0.93]
+    })
+    st.dataframe(model_results)
+    
+    fig, ax = plt.subplots(figsize=(8,4))
+    sns.barplot(data=model_results, x='Model', y='AUC', hue='Model', palette='viridis', legend=False, ax=ax)
+    ax.set_title('AUC Score by Model')
+    ax.set_ylim(0.8, 1.0)
+    st.pyplot(fig)
+    
+    st.markdown("**Best model:** Logistic Regression (94.2% accuracy, 0.98 AUC)")
+
+with tab2:
+    st.subheader("Model Comparison - Predicting Sales Amount")
+    reg_results = pd.DataFrame({
+        'Model': ['Linear Regression', 'Decision Tree', 'Random Forest', 'Gradient Boosting', 'XGBoost', 'SVR', 'KNN'],
+        'R2': [0.1863, 0.0920, 0.1963, 0.2233, 0.1717, -0.0098, 0.1049],
+        'RMSE': [693.28, 732.36, 689.02, 677.35, 699.48, 772.34, 727.16]
+    })
+    st.dataframe(reg_results)
+    
+    fig, ax = plt.subplots(figsize=(9,4))
+    sns.barplot(data=reg_results, x='Model', y='R2', hue='Model', palette='coolwarm', legend=False, ax=ax)
+    ax.set_title('R² Score by Model')
+    plt.xticks(rotation=30)
+    st.pyplot(fig)
+    
+    st.markdown("**Best model:** Gradient Boosting (R² = 0.2233) — though overall R² is modest, suggesting Sales is hard to predict from these features alone.")
