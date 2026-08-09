@@ -6,7 +6,9 @@ import seaborn as sns
 st.set_page_config(page_title="Retail Sales Dashboard", layout="wide")
 
 st.title("📊 Retail Sales Analytics Dashboard")
-st.markdown("Interactive dashboard summarizing Week 1 findings from the Superstore dataset.")
+st.markdown("Interactive dashboard summarizing key findings from the Superstore dataset analysis.")
+
+st.header("Data Cleaning & Visualization")
 
 # Load data
 df = pd.read_csv("Sample - Superstore.csv", encoding='latin1')
@@ -63,7 +65,7 @@ st.markdown("""
 - **Sales show seasonality** with year-end peaks and overall growth from 2015 to 2017.
 """)
 
-st.header("🤖 Week 2: Predictive Modeling")
+st.header("Predictive Modeling")
 
 tab1, tab2 = st.tabs(["Classification: Profitability", "Regression: Sales Prediction"])
 
