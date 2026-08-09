@@ -8,7 +8,7 @@ st.set_page_config(page_title="Retail Sales Dashboard", layout="wide")
 st.title("📊 Retail Sales Analytics Dashboard")
 st.markdown("Interactive dashboard summarizing key findings from the Superstore dataset analysis.")
 
-st.header("Data Cleaning & Visualization")
+st.header("Data Visualization")
 
 # Load data
 df = pd.read_csv("Sample - Superstore.csv", encoding='latin1')
