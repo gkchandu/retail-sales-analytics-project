@@ -20,8 +20,10 @@ This project follows a full data science pipeline across four phases:
 - Pandas
 - Matplotlib
 - Seaborn
-- Scikit-learn 
+- Scikit-learn
+- XGBoost
 - Google Colab
+- Streamlit *(for interactive dashboards)*
 
 ## 📁 Project Structure
 ```
