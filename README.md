@@ -55,13 +55,15 @@ retail-sales-analytics-project/
 
 **What was done:**
 -**Task 1 (Classification):** Predicted whether an order is Profitable (Yes/No) using Logistic Regression, Decision Tree, Random Forest, and KNN
+
 -**Task 2 (Regression):** Predicted actual Sales amount using Linear Regression, Decision Tree, Random Forest, Gradient Boosting, XGBoost, SVR, and KNN
 
 **Key Findings:**
 -**Task 1:** Logistic Regression performed best (94.2% accuracy, 0.98 AUC), followed closely by Random Forest (0.97 AUC). The dataset is imbalanced (80.6% profitable orders), making AUC a more reliable metric than accuracy alone.
+
 -**Task 2:** Gradient Boosting performed best (R² = 0.2233), though all models showed modest R² scores overall - suggesting Sales amount is difficult to predict precisely from order-level features alone (Discount, Category, Region, etc.) 
 without additional data like unit pricing or historical demand.
-- A log-transform experiment on Task 2's target improved SVR and KNN specifically, but slightly reduced performance for tree-based models - an interesting example of how preprocessing choices affect different model types differently.
+A log-transform experiment on Task 2's target improved SVR and KNN specifically, but slightly reduced performance for tree-based models - an interesting example of how preprocessing choices affect different model types differently.
 
 **Why both tasks:** Classification tells us *whether* an order is profitable; regression tells us *how much* it's worth. Together, they give a more complete picture than either alone.
 
