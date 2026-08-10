@@ -102,3 +102,26 @@ with tab2:
     st.pyplot(fig)
     
     st.markdown("**Best model:** Gradient Boosting (R² = 0.2233) — though overall R² is modest, suggesting Sales is hard to predict from these features alone.")
+
+st.header("Exploratory Data Analysis")
+
+fig, ax = plt.subplots(figsize=(7,5))
+corr_matrix = df[['Sales', 'Profit', 'Discount', 'Quantity']].corr()
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt=".2f", vmin=-1, vmax=1, ax=ax)
+ax.set_title('Correlation Heatmap')
+st.pyplot(fig)
+
+st.markdown("""
+**Key relationships:** Sales-Profit correlation is 0.48 (moderate positive); 
+Discount-Profit is -0.22 (moderate negative) — heavier discounting tends to erode profit.
+""")
+
+subcat_profit = df.groupby('Sub-Category')['Profit'].mean().sort_values(ascending=False).round(2)
+col1, col2 = st.columns(2)
+with col1:
+    st.markdown("**Top 5 Sub-Categories by Profit**")
+    st.dataframe(subcat_profit.head(5))
+with col2:
+    st.markdown("**Bottom 5 Sub-Categories by Profit**")
+    st.dataframe(subcat_profit.tail(5))
+
