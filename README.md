@@ -30,7 +30,7 @@ This project follows a full data science pipeline across four phases:
 retail-sales-analytics-project/
 ├── 01_Data_Cleaning_and_Visualization.ipynb    # Week 1
 ├── 02_Predictive_Modeling.ipynb            # Week 2 
-├── 03_Exploratory_Data_Analysis.ipynb      # Week 3 (coming soon)
+├── 03_Exploratory_Data_Analysis.ipynb      # Week 3 
 ├── 04_Real_World_Application.ipynb         # Week 4 (coming soon)
 └── README.md
 ```
@@ -64,8 +64,23 @@ retail-sales-analytics-project/
 
 **Why both tasks:** Classification tells us *whether* an order is profitable; regression tells us *how much* it's worth. Together, they give a more complete picture than either alone.
 
+## ✅ Week 3: Exploratory Data Analysis
+**Status:** Complete
+
+**What was done:**
+- Calculated statistical summaries, correlation matrices, and skewness for key numeric variables
+- Compared mean vs median Profit/Sales across Categories and Regions
+- Built a Category × Region pivot table for Sales
+- Identified top and bottom performing Sub-Categories by average profit
+
+**Key Findings:**
+- Sales and Profit are both extremely right-skewed (skewness of 12.97 and 7.56 
+respectively), confirming a small number of large orders drive most of the variation
+- Mean profit is consistently 2-3x higher than median profit across every category and region, showing outliers distort simple averages
+- **Copiers** is an extreme outlier, averaging ~15x more profit than the next best Sub-Category, while **Tables** loses money on average (-55.57)
+- Discount's relationship with Profit is non-linear — profit holds steady up to ~20% discount, then drops sharply beyond 50%
+
 ## 🔜 Coming Up
-- Week 3: Deeper exploratory analysis and correlation study
 - Week 4: Applied business case study and final recommendations
 
 ## 👤 Author
