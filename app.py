@@ -124,4 +124,37 @@ with col1:
 with col2:
     st.markdown("**Bottom 5 Sub-Categories by Profit**")
     st.dataframe(subcat_profit.tail(5))
+# Mean vs Median comparison chart
+category_stats = df.groupby('Category')[['Profit']].agg(['mean', 'median']).round(2)
+category_stats.columns = ['Mean Profit', 'Median Profit']
+
+fig, ax = plt.subplots(figsize=(8,5))
+category_stats.plot(kind='bar', ax=ax, color=['#4C72B0', '#DD8452'])
+ax.set_title('Mean vs Median Profit by Category')
+ax.set_ylabel('Profit')
+plt.xticks(rotation=0)
+st.pyplot(fig)
+
+st.markdown("""
+**Notice the gap:** mean profit is consistently higher than median profit across 
+every category — a sign that a small number of large orders are pulling the 
+average up, while most individual orders earn less than the mean suggests.
+""")
+
+# Skewness distributions
+fig, axes = plt.subplots(1, 2, figsize=(12,4))
+sns.histplot(df['Sales'], bins=40, color='steelblue', kde=True, ax=axes[0])
+axes[0].set_title(f"Sales Distribution (Skewness: {df['Sales'].skew():.2f})")
+sns.histplot(df['Profit'], bins=40, color='darkorange', kde=True, ax=axes[1])
+axes[1].set_title(f"Profit Distribution (Skewness: {df['Profit'].skew():.2f})")
+plt.tight_layout()
+st.pyplot(fig)
+
+st.markdown("""
+**Both distributions are heavily right-skewed** — most orders cluster near small 
+values, with a handful of large orders stretching the tail far to the right. This 
+is consistent with the modest R² scores seen in the regression modeling tab above.
+""")
+
+st.markdown("*See the Discount vs Profit relationship in the Predictive Modeling section above — this stage's correlation analysis (-0.22) confirms that visual pattern numerically.*")
 
