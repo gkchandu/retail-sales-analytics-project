@@ -28,14 +28,14 @@ This project follows a full data science pipeline across four phases:
 ## 📁 Project Structure
 ```
 retail-sales-analytics-project/
-├── 01_Data_Cleaning_and_Visualization.ipynb    # Week 1
-├── 02_Predictive_Modeling.ipynb            # Week 2 
-├── 03_Exploratory_Data_Analysis.ipynb      # Week 3 
-├── 04_Real_World_Application.ipynb         # Week 4 (coming soon)
+├── 01_Data_Cleaning_and_Visualization.ipynb   
+├── 02_Predictive_Modeling.ipynb           
+├── 03_Exploratory_Data_Analysis.ipynb     
+├── 04_Real_World_Application.ipynb        
 └── README.md
 ```
 
-## ✅ Week 1: Data Cleaning & Visualization
+## ✅ 1: Data Cleaning & Visualization
 **Status:** Complete
 
 **What was done:**
@@ -50,7 +50,7 @@ retail-sales-analytics-project/
 - Sales show strong year-end seasonality with overall growth from 2015 to 2017 (peak: 2017 at 118,447)
 - Higher discounts are strongly linked to losses — orders with 70-80% discount are almost always unprofitable, especially in the Technology category
 
-## ✅ Week 2: Predictive Modeling
+## ✅ 2: Predictive Modeling
 **Status:** Complete
 
 **What was done:**
@@ -64,7 +64,7 @@ retail-sales-analytics-project/
 
 **Why both tasks:** Classification tells us *whether* an order is profitable; regression tells us *how much* it's worth. Together, they give a more complete picture than either alone.
 
-## ✅ Week 3: Exploratory Data Analysis
+## ✅ 3: Exploratory Data Analysis
 **Status:** Complete
 
 **What was done:**
@@ -80,8 +80,30 @@ respectively), confirming a small number of large orders drive most of the varia
 - **Copiers** is an extreme outlier, averaging ~15x more profit than the next best Sub-Category, while **Tables** loses money on average (-55.57)
 - Discount's relationship with Profit is non-linear — profit holds steady up to ~20% discount, then drops sharply beyond 50%
 
-## 🔜 Coming Up
-- Week 4: Applied business case study and final recommendations
+## ✅ 4: Real-World Business Case Study
+**Status:** Complete
+
+**What was done:**
+- Framed a real business question: where should the company focus to improve 
+overall profitability?
+- Analyzed profitability by Customer Segment, simulated the impact of capping 
+discounts at different thresholds, built a Sub-Category action list, and created 
+an inventory planning framework (velocity x margin)
+- Applied the Week 2 classification model to hypothetical new orders to 
+demonstrate real-time business use
+
+**Key Findings:**
+- Capping discounts at **40%** would have avoided an estimated **99,558** in 
+losses across **933** orders
+- **Tables, Bookcases, and Supplies** consistently lose money and are candidates 
+for pricing review; **Binders** sells in high volume but at a negative margin
+- **Copiers** is a high-value, low-turnover product — 15x more profitable than 
+the next-best Sub-Category, but shouldn't be bulk-stocked
+- **Home Office** segment has the highest margin (14.3%) despite the lowest 
+discount rate — segment-specific discount strategy may outperform a uniform policy
+
+**Full business case study, including executive summary and recommendations, is 
+available in the notebook.**
 
 ## 👤 Author
 *[G K Chandrakala]* — B.E CSE(AI-ML) Student
