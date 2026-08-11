@@ -28,15 +28,17 @@ This project follows a full data science pipeline across four phases:
 ## 📁 Project Structure
 ```
 retail-sales-analytics-project/
-├── 01_Data_Cleaning_and_Visualization.ipynb   
-├── 02_Predictive_Modeling.ipynb           
-├── 03_Exploratory_Data_Analysis.ipynb     
-├── 04_Real_World_Application.ipynb        
+├── 01_Data_Cleaning_and_Visualization.ipynb
+├── 02_Predictive_Modeling.ipynb
+├── 03_Exploratory_Data_Analysis.ipynb
+├── 04_Real_World_Application.ipynb
+├── app.py                          # Streamlit dashboard
+├── requirements.txt                # Dashboard dependencies
+├── Sample - Superstore.csv         # Dataset
 └── README.md
 ```
 
-## ✅ 1: Data Cleaning & Visualization
-**Status:** Complete
+## 1: Data Cleaning & Visualization
 
 **What was done:**
 - Checked and confirmed no missing values or duplicate rows in the dataset
@@ -50,8 +52,7 @@ retail-sales-analytics-project/
 - Sales show strong year-end seasonality with overall growth from 2015 to 2017 (peak: 2017 at 118,447)
 - Higher discounts are strongly linked to losses — orders with 70-80% discount are almost always unprofitable, especially in the Technology category
 
-## ✅ 2: Predictive Modeling
-**Status:** Complete
+## 2: Predictive Modeling
 
 **What was done:**
 - **Task 1 (Classification):** Predicted whether an order is Profitable (Yes/No) using Logistic Regression, Decision Tree, Random Forest, and KNN
@@ -64,8 +65,7 @@ retail-sales-analytics-project/
 
 **Why both tasks:** Classification tells us *whether* an order is profitable; regression tells us *how much* it's worth. Together, they give a more complete picture than either alone.
 
-## ✅ 3: Exploratory Data Analysis
-**Status:** Complete
+## 3: Exploratory Data Analysis
 
 **What was done:**
 - Calculated statistical summaries, correlation matrices, and skewness for key numeric variables
@@ -80,8 +80,7 @@ respectively), confirming a small number of large orders drive most of the varia
 - **Copiers** is an extreme outlier, averaging ~15x more profit than the next best Sub-Category, while **Tables** loses money on average (-55.57)
 - Discount's relationship with Profit is non-linear — profit holds steady up to ~20% discount, then drops sharply beyond 50%
 
-## ✅ 4: Real-World Business Case Study
-**Status:** Complete
+## 4: Real-World Business Case Study
 
 **What was done:**
 - Framed a real business question: where should the company focus to improve 
@@ -89,7 +88,7 @@ overall profitability?
 - Analyzed profitability by Customer Segment, simulated the impact of capping 
 discounts at different thresholds, built a Sub-Category action list, and created 
 an inventory planning framework (velocity x margin)
-- Applied the Week 2 classification model to hypothetical new orders to 
+- Applied the **profitability classification model** (built during the predictive modeling stage) to hypothetical new orders to 
 demonstrate real-time business use
 
 **Key Findings:**
@@ -106,4 +105,4 @@ discount rate — segment-specific discount strategy may outperform a uniform po
 available in the notebook.**
 
 ## 👤 Author
-*[G K Chandrakala]* — B.E CSE(AI-ML) Student
+*[G K Chandrakala]* 
