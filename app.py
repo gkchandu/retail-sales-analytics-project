@@ -158,3 +158,30 @@ is consistent with the modest R² scores seen in the regression modeling tab abo
 
 st.markdown("*See the Discount vs Profit relationship in the Predictive Modeling section above — this stage's correlation analysis (-0.22) confirms that visual pattern numerically.*")
 
+st.header("Real-World Business Case Study")
+
+st.markdown("""
+**Business Question:** Where should the company focus to improve overall 
+profitability, and what would the projected impact be?
+""")
+
+# Discount threshold impact chart
+thresholds_pct = [20, 30, 40, 50]
+losses_avoided = [138515.24, 127737.55, 99558.59, 76559.05]
+
+fig, ax = plt.subplots(figsize=(8,5))
+sns.barplot(x=thresholds_pct, y=losses_avoided, hue=thresholds_pct, palette='Reds_r', legend=False)
+ax.set_title('Losses Avoided by Discount Cap Threshold')
+ax.set_xlabel('Discount Cap (%)')
+ax.set_ylabel('Losses Avoided ($)')
+st.pyplot(fig)
+
+st.markdown("""
+**Key recommendation:** Capping discounts at **30-40%** avoids significant losses 
+(99,558+ at a 40% cap) while affecting fewer orders than a stricter cap.
+
+**Other findings:** Tables, Bookcases, and Supplies consistently lose money and are 
+candidates for pricing review. Copiers is a high-value, low-turnover product — 
+15x more profitable than the next-best Sub-Category. See the full case study 
+notebook for the complete analysis and recommendations.
+""")
